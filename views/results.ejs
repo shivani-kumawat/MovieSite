@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+<div class="container">
+	<div class="jumbotron">
+		<h1>
+		RELATED CONTENTS ARE:
+		</h1>
+	</div>
+	
+	<div class="row text-center" style="display:flex; flex-wrap: wrap;">
+		<% data["Search"].forEach(function(data){ %>
+					<div class="col-md-4 col-sm-6">
+							<img src=" <%= data["Poster"] %>" class="img-thumbnail">
+							<div class="caption">
+                      			<strong><%= data["Title"] %></strong> 
+								 <%= data["Year"] %>
+						</div>
+					</div>
+				
+		<% }) %>
+		
+	</div>
+	<a href="/"  class="btn btn-primary">Search</a>
+</div>
+
+<%- include("partials/footer") %>		
